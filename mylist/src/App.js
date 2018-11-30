@@ -21,7 +21,6 @@ class App extends Component {
           return(<li key = {index} className = "myList"> {item} </li>)
           })}
           </ul>
-          
         </form>
       </div>
     );
