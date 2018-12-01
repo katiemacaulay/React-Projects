@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import ListItems from './ListItems'
 
@@ -29,22 +28,15 @@ class App extends Component {
     })
   }
 
-
   render() {
     return (
       <div className="App">
         <header className = "App-header">
           <h1> My List </h1>
           <form onSubmit = {this.addToList}> 
-            <input onChange = {this.onChange} placeholder = 'add list item here'></input>
+            <input value = {this.state.input} onChange = {this.onChange} placeholder = 'add list item here'></input>
             <button>Add Item</button>
-            ListItems
-            {/* <ul>{this.state.list.map((item, index) => {
-            return(<li key = {index} className = "myList"> 
-            {item} 
-            </li>)
-            })}
-            </ul> */}
+            <ListItems allTheListItems = {this.state.list} aFunc = {this.addToList}/>
           </form>
         </header>
       </div>
