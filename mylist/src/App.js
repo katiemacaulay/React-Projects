@@ -28,6 +28,10 @@ class App extends Component {
     })
   }
 
+  removeItem = (e) => {
+    this.
+  }
+
   render() {
     return (
       <div className="App">
