@@ -28,19 +28,24 @@ class App extends Component {
     })
   }
 
-  removeItem = (e) => {
-    this.
+  removeItem = (index) => {
+    const listCopy = this.state.list.slice()
+    listCopy.splice(index, 1)
+    this.setState({
+      list: listCopy,
+    })
   }
+  
 
   render() {
     return (
       <div className="App">
         <header className = "App-header">
           <h1> My List </h1>
+          <ListItems allTheListItems = {this.state.list} removeItem = {this.removeItem}/>
           <form onSubmit = {this.addToList}> 
             <input value = {this.state.input} onChange = {this.onChange} placeholder = 'add list item here'></input>
             <button>Add Item</button>
-            <ListItems allTheListItems = {this.state.list} aFunc = {this.addToList}/>
           </form>
         </header>
       </div>
