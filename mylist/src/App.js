@@ -8,7 +8,7 @@ class App extends Component {
     input: '',
     list: [
       'cat',
-      'dog',
+      'horse',
       'mouse'
     ], 
   }
